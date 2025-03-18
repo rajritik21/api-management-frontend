@@ -20,8 +20,9 @@ function App() {
   return (
     <AuthProvider>
       <TaskProvider>
-        <Router>
+        <Router basename="/api-management-frontend">
           <Routes>
+            <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route
